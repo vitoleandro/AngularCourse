@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Angular Material</title>
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+  <link rel="stylesheet" href="bower_components/angular-material/themes/blue-theme.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+</head>
+
+<body ng-app="abListaCarros" layout="column" layout-align="top center">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <span class="md-flex">Lista de Carros</span>
+    </div>
+  </md-toolbar>
+
+  <md-content layout="column" layout-align="center center" ng-controller="ListaCtrl">
+
+    <!-- BEGIN : MAIN CONTENT-->
+    <div class="app-content">
+      <form>
+        <md-text-float label="Pesquisar por carro" class="long" ng-model="busca" tipo="search"></md-text-float>
+      </form>
+      <md-divider></md-divider>
+      <md-list>
+        <md-item ng-repeat="carro in carros | orderBy: 'price' | filter: busca">
+          <md-item-content>
+            <div class="md-tile-left">
+              <img src="http://placehold.it/70x70" class="face" alt="image"/>
+            </div>
+            <div class="md-tile-content">
+              <h3>{{$index + 1}}. {{carro.model}}</h3>
+              <h4 class="preco">{{carro.price | currency}}</h4>
+            </div>
+          </md-item-content>
+          <md-divider ng-if="!$last"></md-divider>
+        </md-item>
+      </md-list>
+    </div>
+
+  </md-content>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/hammerjs/hammer.min.js"></script>
+  <script src="bower_components/angular-material/angular-material.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

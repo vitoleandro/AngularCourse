@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Custon Service</title>
+</head>
+<body ng-app="CustonService">
+
+  <!-- first controller -->
+  <div class="cyan" ng-controller="Controller1">
+    <small>Controlador 1</small>
+    <h3>
+      Mensagem do Serviço
+      <br/>
+      <h1 class="mensagem">{{getMensagem()}}</h1>
+    </h3>
+  </div>
+
+  <!-- second controller -->
+  <div class="green" ng-controller="Controller2">
+    <small>Controlador 2</small>
+    <h3>
+      Mensagem do Serviço
+      <br/>
+      <h1 class="mensagem">{{getMensagem()}}</h1>
+    </h3>
+  </div>
+
+  <!-- manipulate controllers -->
+  <div class="yellow" ng-controller="ServicoSetterCtrl">
+    <form ng-submit="setMensagem()">
+      <h3>Nova Mensagem no Serviço</h3>
+      <input type="text" ng-model="novaMensagem"/>
+    </form>
+  </div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

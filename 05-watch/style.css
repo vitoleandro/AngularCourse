@@ -1,0 +1,11 @@
+body {
+  background: #eeeeee;
+  padding: 50px;
+}
+.container {
+  max-width: 700px;
+  margin-top: 20px;
+  border: 1px solid #dedede;
+  padding: 20px;
+  border-radius: 2px;
+}

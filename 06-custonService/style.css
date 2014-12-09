@@ -1,0 +1,19 @@
+.cyan {
+  background: cyan;
+  padding: 50px;
+}
+
+.green {
+  background: greenyellow;
+  padding: 50px;
+}
+
+.yellow {
+  background: #ffff00;
+  padding: 50px;
+}
+
+.mensagem {
+  color: #ffffff;
+  text-shadow: 1px 0 6px rgba(0,0,0,0.1);
+}

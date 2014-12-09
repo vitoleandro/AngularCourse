@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Data Bind</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body ng-app>
+
+  <h1 class="text-center">Data Binding
+    <small>Angular Bootcamp</small>
+  </h1>
+
+  <br/>
+
+  <blockquote class="text-center">
+    <p>{{msg}}</p>
+    <footer>Autor {{autor}}</footer>
+  </blockquote>
+
+  <form role="form" action="">
+    <div class="form-group">
+      <label for="mensagem">Mensagem</label>
+      <input id="mensagem" placeholder="Escreva a mensagem" class="form-control" type="text" ng-model="msg"/>
+    </div>
+    <div class="form-group">
+      <label for="autor">Autor</label>
+      <input id="autor" placeholder="Quem disse?" class="form-control" type="text" ng-model="autor"/>
+    </div>
+  </form>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

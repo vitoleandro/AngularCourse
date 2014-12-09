@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Angular Watch</title>
+</head>
+<body ng-app="CalculatorApp">
+
+<div class="container" ng-controller="CalcCtrl">
+  <form action="" role="form">
+    <div class="form-group">
+      <label for="preco">Preço: </label>
+      <input type="number" id="preco" required ng-model="price"/>
+      <hr/>
+
+      <label for="desconto">Desconto (digite 20 para 20%): </label>
+      <input type="number" id="desconto" required ng-model="desconto"/>
+    </div>
+  </form>
+  <hr/>
+
+  <h1>Total com desconto: {{finalValue | currency}}</h1>
+  <br/>
+
+  <button class="btn btn-success" ng-if="!isWatching" ng-click="startWatch()">Iniciar Watch</button>
+  <button class="btn btn-danger" ng-if="isWatching" ng-click="stopWatch()">Encerrar Watch</button>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body ng-app="shoppingCart">
+
+<div class="container" ng-controller="CartCtrl">
+  <h1>Seu Pedido</h1>
+
+  <form role="form" class="form-inline">
+    <ul class="list-unstyled text-left">
+      <li ng-repeat="item in items">
+        <span><strong>{{item.titulo}}</strong> | quantidade:</span>
+        <input type="number" class="text-center number" required ng-model="item.quantidade"/>
+
+        <span>{{item.preco | currency}}</span>
+        <strong> | Total: {{item.preco * item.quantidade}}</strong>
+
+        <button ng-click="remove($index)" class="btn btn-danger">
+          <span class="glyphicon glyphicon-remove"></span>
+          Remover
+        </button>
+      </li>
+    </ul>
+  </form>
+
+  <h1>Total: {{getTotal() | currency}}</h1>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Todo App</title>
+</head>
+<body ng-app="TodoApp">
+
+<div class="container" ng-controller="TodoAppCtrl">
+  <h1>Gerenciador de Tarefas <small>Angular Bootcamp</small></h1>
+  <br/>
+
+  <p>{{getTaskLength()}} Tarefas restantes.</p>
+  <ul class="list-unstyled">
+    <li ng-repeat="task in tasks">
+      <input type="checkbox" ng-model="task.done" ng-change="saveTasksLocal()"/>
+      <span class="done-{{task.done}}">{{task.text}}</span>
+    </li>
+  </ul>
+  <hr/>
+  <form action="" role="form" class="form-inline" ng-submit="addTask()">
+    <div class="form-group">
+      <input class="form-control text-center" type="text" placeholder="Nova tarefa" required ng-model="newTask"/>
+      <button type="submit" class="btn btn-primary" ng-click="addTask()"><span class="glyphicon glyphicon-plus"></span></button>
+    </div>
+  </form>
+
+  <hr/>
+
+  <button type="button" class="btn btn-warning" ng-click="removeCompleteTask()">
+    <span class="glyphicon glyphicon-remove"></span>
+    Apagar tarefas completadas
+  </button>
+</div>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
