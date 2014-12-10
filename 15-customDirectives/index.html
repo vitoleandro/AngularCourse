@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body ng-app="customDirectivesApp" ng-controller="AppController">
+
+<painel-de-login></painel-de-login>
+<bt-mensagem titulo="Teste" alertar="alertar()">
+  finishing \o/
+</bt-mensagem>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="login/loginModule.js"></script>
+<script src="mensagem/mensagemModule.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

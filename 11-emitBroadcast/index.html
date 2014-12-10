@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title></title>
+</head>
+<body ng-app="">
+
+<!-- controlador 1 -->
+<div ng-controller="Controlador1" class="controlador-1 padding">
+  <h1>Controlador 1</h1>
+  <input type="text" ng-model="mensagem"/>
+  <button ng-click="dispararEventoParaBaixo()">Mandar evento para baixo</button>
+  <button ng-click="rootScopeDizOi()">$rootScope diz oi</button>
+  <button ng-click="rootScopeMandaLimparCampos()">$rootScope manda limpar campos</button>
+
+  <!-- controlador 1-a -->
+  <div ng-controller="Controlador1A" class="controlador-1-A padding">
+    <h1>Controlador 1 A</h1>
+    <input type="text" ng-model="mensagem"/>
+  </div>
+
+  <!-- controlador 1-b -->
+  <div ng-controller="Controlador1B" class="controlador-1-B padding">
+    <h1>Controlador 1 B</h1>
+    <input type="text" ng-model="mensagem"/>
+    <button ng-click="disparaEventoParaCima()">Manda evento para cima</button>
+  </div>
+
+</div>
+
+<!--controlador 2-->
+<div ng-controller="Controlador2" class="controlador-2 padding">
+  <h1>Controlador 3</h1>
+  <input type="text" ng-model="mensagem"/>
+</div>
+
+<!--controlador 3-->
+<div ng-controller="Controlador3" class="controlador-3 padding">
+  <h1>Controlador 3</h1>
+  <input type="text" ng-model="mensagem"/>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

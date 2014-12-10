@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta charset="UTF-8">
+  <title>Load JSON</title>
+</head>
+<body ng-app="jsonApp">
+<div ng-controller="MainController">
+  <button ng-class="carregaJSON()">Carrega JSON</button>
+
+  <ul>
+    <li ng-repeat="time in times">
+      <input type="checkbox" ng-model="time.checado"/>
+      <span>{{time.time}}</span>
+    </li>
+  </ul>
+</div>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

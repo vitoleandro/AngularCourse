@@ -1,0 +1,10 @@
+[
+  {"time": "São Paulo", "estado": "Rio de Janeiro", "checado": false},
+  {"time": "Fluminense", "estado": "Arapiraca", "checado": false},
+  {"time": "Flamengo", "estado": "Rio Largo", "checado": false},
+  {"time": "Palmeiras", "estado": "Rio de Janeiro", "checado": false},
+  {"time": "CRB", "estado": "Alagoas", "checado": true},
+  {"time": "CSA", "estado": "Alagoas", "checado": true},
+  {"time": "Corinthians", "estado": "Rio de Janeiro", "checado": false},
+  {"time": "Portuguesa", "estado": "Rio de Janeiro", "checado": false}
+]

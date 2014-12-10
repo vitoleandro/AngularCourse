@@ -1,0 +1,26 @@
+.padding {
+  margin: 10px;
+  padding: 30px;
+}
+
+.controlador-1 {
+  background: darkred;
+}
+
+.controlador-1-A {
+  background: red;
+  width: 400px;
+  float: left;
+}
+
+.controlador-1-B {
+  background: indianred;
+}
+
+.controlador-2 {
+  background: greenyellow;
+}
+
+.controlador-3 {
+  background: orangered;
+}
