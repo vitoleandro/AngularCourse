@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta charset="UTF-8">
+  <title>Custom Filter</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body ng-app="customFilter" ng-controller="ListaController">
+<form action="" role="form" ng-submit="adicionarTarefa()">
+  <label for="nova-tarefa">Nova tarefa</label>
+  <input id="nova-tarefa" type="text" placeholder="Nova tarefa" required ng-model="novaTarefa"/>
+  <button class="btn btn-primary">Adicionar tarefa</button>
+</form>
+
+<ul>
+  <li ng-repeat="tarefa in tarefas" ng-bind-html="tarefa.text | estaFeito:tarefa.status"></li>
+</ul>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+body {
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  display: inline;
+  list-style: none;
+}
+
+.pagina1 {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 40px;
+  background: lightblue;
+}
+
+.pagina2 {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 40px;
+  background: lightgoldenrodyellow;
+}
+
+.pagina3 {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 40px;
+  background: lightgrey;
+}
+/* animation */
+.ng-view {
+  display: block;
+  position: relative;
+}
+
+.ng-enter {
+  -webkit-animation: enter 1s ease-in;
+  animation: enter 1s ease-in;
+}
+
+.ng-leave {
+  -webkit-animation: leave .5s ease-in;
+  animation: leave .5s ease-in;
+}
+
+@keyframes enter {
+  0%, 50% {opacity: 0} 100% {opacity: 1}
+}
+
+@-webkit-keyframes enter {
+   0%, 50% {opacity: 0} 100% {opacity: 1}
+}
+
+@keyframes leave {
+  0%, 50% {opacity: 1} 100% {opacity: 0}
+}
+
+@-webkit-keyframes leave {
+  0%, 50% {opacity: 1} 100% {opacity: 0}
+}
